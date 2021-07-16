@@ -10,8 +10,8 @@ namespace CodeWarsTest
         [TestCase(false, ("This is a unique sentence."))]
         public void TestsPanagram_ForCorrectReturn(bool expected, String str)
         {
-            DetectPangram.Solution();
-            Assert.That(true, str);
+;
+            Assert.That(expected, Is.EqualTo(DetectPangram.Solution(str)));
         }
     }
 }
