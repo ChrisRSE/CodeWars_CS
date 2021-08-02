@@ -15,7 +15,7 @@ namespace CodeWars.Challenge_Solutions
             int j = 0;
             for(int i = longArr.Length - 1; i >= 0; i--)
             {
-                longArr[j++] = stringArr[i] - 48;
+                longArr[j++] = Convert.ToInt32(stringArr[j]);
             }
 
             return longArr;
