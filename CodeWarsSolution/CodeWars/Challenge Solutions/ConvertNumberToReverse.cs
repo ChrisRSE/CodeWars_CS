@@ -10,15 +10,20 @@ namespace CodeWars.Challenge_Solutions
     {
         public static long[] Digitize(long n)
         {
-            var stringArr = n.ToString().ToCharArray();
-            var longArr = new long[stringArr.Length];
-            int j = 0;
-            for(int i = longArr.Length - 1; i >= 0; i--)
-            {
-                longArr[j++] = Convert.ToInt32(stringArr[j]);
-            }
+            //// Initial Solution
 
-            return longArr;
+            //var stringArr = n.ToString().ToCharArray();
+            //var longArr = new long[stringArr.Length];
+            //int j = 0;
+            //for(int i = longArr.Length - 1; i >= 0; i--)
+            //{
+            //    longArr[j++] = Convert.ToInt32(stringArr[i]);
+            //}
+
+            //return longArr;
+
+            // One Line Solution >:)
+            return n.ToString().Reverse().Select(n => Convert.ToInt64(n.ToString())).ToArray();
         }
     }
 }
